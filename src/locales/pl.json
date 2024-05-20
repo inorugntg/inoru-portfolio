@@ -1,0 +1,105 @@
+{
+    "navbar": {
+        "education": "Edukacja",
+        "experience": "Doświadczenie",
+        "skills": "Umiejętności",
+        "projects": "Projekty",
+        "contact": "Kontakt",
+        "images": {
+            "sun": "Zmień motyw na jasny",
+            "moon": "Zmień motyw na ciemny",
+            "polishFlag": "Zmień język na polski",
+            "greatBritainFlag": "Zmień język na angielski"
+        }
+    },
+
+    "landingPage": {
+        "myNameIs": "Hej, nazywam się",
+        "name": "Maciek Iwaniuk.",
+        "description": "Jestem studentem informatyki, skupionym na podnoszeniu swoich kompetencji. Wiążę swoją przyszłość z branżą IT i stale rozwijam się, aby być na bieżąco z najnowszymi technologiami."
+    },
+
+    "education": {
+        "title": "Edukacja",
+        "educationItems": {
+            "zse": {
+                "title": "Zespół Szkół Elektrycznych w Białymstoku",
+                "content": "Dzięki edukacji w tej placówce zdobyłem podstawową wiedzę z zakresu informatyki. Poszerzyłem swoje horyzonty z zakresu wiedzy na temat baz danych, tworzenia aplikacji desktopowych oraz webowych. ",
+                "major": "Technik programista"
+            },
+            "universityOfTechnology": {
+                "title": "Politechnika Białostocka",
+                "content": "Poszerzę wiedzę związaną z IT.",
+                "major": "Informatyka"
+            }
+        }
+    },
+
+    "experience": {
+        "title": "Doświadczenie",
+        "experienceItems": {
+            "merinosoft": {
+                "content": "Rozwój aplikacji webowej związanej z zarządzaniem pracownikami przez firmy.",
+                "profession": "Programista PHP",
+                "period": "sie 2021 - gru 2022 ",
+                "length": "(1 rok 5 mies.)"
+            },
+            "ebrand": {
+                "content": "Rozwój rozproszonego systemu opartego na architekturę mikroserwioswą związanego z ochroną marek online. Integracje z licznymi zewnętrznymi systemami przez API.",
+                "profession":"Programista PHP",
+                "period": "kwi 2023 - wrz 2023 ",
+                "length": "(6 mies.)"
+            }
+        }
+    },
+
+    "skills": {
+        "title": "Umiejętności",
+        "useRegularly": "Regularnie używam",
+        "hadContact": "Miałem styczność z"
+    },
+
+    "projects": {
+        "title": "Projekty",
+        "projectsItems": {
+            "shopSystem": {
+                "title": "System sklepu",
+                "content": "Backend prostego systemu sklepu. Projekt oparty jest na CQRS wykonanym jako modułowy monolit. Foldery są posegregowane przy użyciu podejścia Domain-Driven-Design."
+            },
+            "demoCryptoExchange": {
+                "title": "Demo giełda kryptowalut",
+                "content": "Projekt demo giełdy kryptowalut, która symuluje rzeczywiste funkcjonowanie giełdy, jednak używa fikcyjnej waluty. Dane dotyczące cen kryptowalut są pobierane z API udostępnianego przez giełdę Binance."
+            },
+            "snakeWebApp": {
+                "title": "Snake - aplikacja webowa",
+                "content": "Aplikacja obsługuje dane przesyłane przez grę na komputer napisaną w pythonie. Posiada rozbudowane funkcjonalności kont użytkowników wraz z obszernym, bogatym w funkcjonalności panelem administratora."
+            },
+            "snakeGame": {
+                "title": "Snake - gra",
+                "content": "Gra odczytuje oraz zapisuje dane poprzez API aplikacji webowej. Użytkownik rywalizuje z innymi użytkownikami poprzez ranking, zdobywa walutę, którą może następnie wydać na ulepszenia lub skórki poprawiające odczucia z rozgrywki."
+            },
+            "minesweeper": {
+                "title": "Saper",
+                "content": "Gra w sapera z możliwością wyboru trudności gry oraz zapisywaniem wyborów jak i rekordów użytkownika do lokalnej pamięci przeglądarki."
+            },
+            "portfolio": {
+                "title": "Portfolio",
+                "content": "Strona internetowa streszczająca informacje o mojej osobie. Zawarte są w niej wiadomości na temat mojej edukacji, doświadczenia komercyjnego czy projektów."
+            },
+            "youtubeDownloader": {
+                "title": "Pobieracz YouTube",
+                "content": "Aplikacja desktopowa która umożliwia pobieranie filmików z YouTube. Posiada zakładkę z ustawieniami pobierania, gdzie użytkownik może m.in. wybrać jakość pobieranych treści czy zmienić rozszerzenie."
+            }
+        }
+    },
+
+    "contact": {
+        "title": "Kontakt"
+    },
+
+    "footer": {
+        "allRightsReserved": "© Wszelkie prawa zastrzeżone"
+    },
+
+    "author": "Maciek Iwaniuk"
+}

@@ -1,0 +1,93 @@
+{
+    "navbar": {
+        "education": "Education",
+        "experience": "Experience",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "images": {
+            "sun": "Change theme to light",
+            "moon": "Change theme to dark",
+            "indonesiaFlag": "Change language to indonesian",
+            "greatBritainFlag": "Change language to English"
+        }
+    },
+
+    "landingPage": {
+        "myNameIs": "Hi, my name is",
+        "name": "Inoru Akhmad.",
+        "description": "I am a graduate of a vocational high school in software engineer, with a strong emphasis on enhancing my skills. I aspire to build my future in the IT industry and constantly strive to develop myself to stay up to date with the latest technologies."
+    },
+
+    "education": {
+        "title": "Education",
+        "educationItems": {
+            "zse": {
+                "title": "State Vocational High School 1 Surabaya",
+                "content": "Thanks to my education at this institute, I gained a solid foundation in software engineering. This experience broadened my horizons and provided me with extensive knowledge about databases, as well as desktop and web application development.",
+                "major": "Software Engineering"
+            },
+            "universityOfTechnology": {
+                "title": "Bialystok University of Technology",
+                "content": "Will expand IT-related knowledge.",
+                "major": "Computer science"
+            }
+        }
+    },
+
+    "experience": {
+        "title": "Experience",
+        "experienceItems": {
+            "merinosoft": {
+                "content": "Development of a web application relating to the management of employees in a company.",
+                "profession": "Web Developer (Intern)",
+                "period": "Oct 2022 - Maret 2023 ",
+                "length": "(6 months)"
+            },
+            "ebrand": {
+                "content": "Development of a distributed microservices-based system relating to online brand protection. Integration with multiple external APIs.",
+                "profession":"PHP Developer",
+                "period": "Apr 2023 - Sep 2023 ",
+                "length": "(6 months)"
+            }
+        }
+    },
+
+    "skills": {
+        "title": "Skills",
+        "useRegularly": "I use regularly",
+        "hadContact": "I had contact with"
+    },
+
+    "projects": {
+        "title": "Projects",
+        "projectsItems": {
+            "shopSystem": {
+                "title": "Food Reciepe",
+                "content": "Food recipe website application. This project was created to manage food recipes. The folder directory is arranged neatly."
+            },
+            "snakeWebApp": {
+                "title": "Rent a football field",
+                "content": "This application is used to assist field rental payment methods based on rental hours and field type. This application has extensive user account functionality, along with a comprehensive and feature-rich admin page."
+            },
+            "snakeGame": {
+                "title": "Blog App",
+                "content": "This application is designed to make it easy for bloggers to create, edit and publish content quickly and efficiently. Apart from that, users can also enjoy various interesting articles from various topic categories. With a focus on interactivity, content editing, and an attractive appearance, this project aims to improve the user experience for both bloggers and readers."
+            },
+            "minesweeper": {
+                "title": "Clinic Management System",
+                "content": "Website-based Clinic Management Application. This application was created with the aim of assisting in the appointment process with doctors, has good features and infrastructure"
+            }
+        }
+    },
+
+    "contact": {
+        "title": "Contact"
+    },
+
+    "footer": {
+        "allRightsReserved": "© All rights reserved"
+    },
+
+    "author": "Inoru Akhmad"
+}

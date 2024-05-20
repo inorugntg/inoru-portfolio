@@ -1,0 +1,93 @@
+{
+    "navbar": {
+        "education": "Pendidikan",
+        "experience": "Pengalaman",
+        "skills": "Keterampilan",
+        "projects": "Proyek",
+        "contact": "Kontak",
+        "images": {
+            "sun": "Ganti tema ke terang",
+            "moon": "Ganti tema ke gelap",
+            "indonesiaFlag": "Ganti bahasa ke Indonesia",
+            "greatBritainFlag": "Ganti bahasa ke Inggris"
+        }
+    },
+
+    "landingPage": {
+        "myNameIs": "Halo, nama saya",
+        "name": "Inoru Akhmad.",
+        "description": "Saya adalah lulusan sekolah menengah kejuruan dalam bidang rekayasa perangkat lunak, dengan penekanan kuat pada peningkatan keterampilan saya. Saya bercita-cita untuk membangun masa depan di industri IT dan terus berusaha mengembangkan diri agar tetap mengikuti teknologi terbaru."
+    },
+
+    "education": {
+        "title": "Pendidikan",
+        "educationItems": {
+            "zse": {
+                "title": "Sekolah Menengah Kejuruan Negeri 1 Surabaya",
+                "content": "Berkat pendidikan di institusi ini, saya memperoleh dasar yang kuat dalam rekayasa perangkat lunak. Pengalaman ini memperluas wawasan saya dan memberi saya pengetahuan luas tentang basis data, serta pengembangan aplikasi desktop dan web.",
+                "major": "Rekayasa Perangkat Lunak"
+            },
+            "universityOfTechnology": {
+                "title": "Universitas Teknologi Bialystok",
+                "content": "Akan memperluas pengetahuan terkait IT.",
+                "major": "Ilmu Komputer"
+            }
+        }
+    },
+
+    "experience": {
+        "title": "Pengalaman",
+        "experienceItems": {
+            "merinosoft": {
+                "content": "Pengembangan aplikasi web yang berkaitan dengan manajemen karyawan di perusahaan.",
+                "profession": "Pengembang Web (Magang)",
+                "period": "Okt 2022 - Mar 2023",
+                "length": "(6 bulan)"
+            },
+            "ebrand": {
+                "content": "Pengembangan sistem berbasis microservices yang terdistribusi terkait perlindungan merek online. Integrasi dengan beberapa API eksternal.",
+                "profession": "Pengembang PHP",
+                "period": "Apr 2023 - Sep 2023",
+                "length": "(6 bulan)"
+            }
+        }
+    },
+
+    "skills": {
+        "title": "Keterampilan",
+        "useRegularly": "Saya gunakan secara rutin",
+        "hadContact": "Saya pernah menggunakan"
+    },
+
+    "projects": {
+        "title": "Proyek",
+        "projectsItems": {
+            "shopSystem": {
+                "title": "Resep Makanan",
+                "content": "Aplikasi website resep makanan. Proyek ini dibuat untuk mengelola resep makanan. Direktori folder diatur dengan rapi."
+            },
+            "snakeWebApp": {
+                "title": "Sewa Lapangan Sepak Bola",
+                "content": "Aplikasi ini digunakan untuk membantu metode pembayaran sewa lapangan berdasarkan jam sewa dan jenis lapangan. Aplikasi ini memiliki fungsionalitas akun pengguna yang luas, bersama dengan halaman admin yang lengkap dan kaya fitur."
+            },
+            "snakeGame": {
+                "title": "Aplikasi Blog",
+                "content": "Aplikasi ini dirancang untuk memudahkan para blogger dalam membuat, mengedit, dan mempublikasikan konten dengan cepat dan efisien. Selain itu, pengguna juga dapat menikmati berbagai artikel menarik dari berbagai kategori topik. Dengan fokus pada interaktivitas, pengeditan konten, dan tampilan yang menarik, proyek ini bertujuan untuk meningkatkan pengalaman pengguna baik untuk blogger maupun pembaca."
+            },
+            "minesweeper": {
+                "title": "Sistem Manajemen Klinik",
+                "content": "Aplikasi Manajemen Klinik berbasis web. Aplikasi ini dibuat dengan tujuan membantu proses janji temu dengan dokter, memiliki fitur dan infrastruktur yang baik."
+            }
+        }
+    },
+
+    "contact": {
+        "title": "Kontak"
+    },
+
+    "footer": {
+        "allRightsReserved": "© Semua hak dilindungi"
+    },
+
+    "author": "Inoru Akhmad"
+}
