@@ -18,15 +18,25 @@ type Experience = {
 
 const experienceItems: Experience[] = [
     {
-        title: 'Energeek The E-Government Solution',
-        contentKey: 'experience.experienceItems.merinosoft.content',
-        professionKey: 'experience.experienceItems.merinosoft.profession',
-        periodKey: 'experience.experienceItems.merinosoft.period',
-        lengthKey: 'experience.experienceItems.merinosoft.length',
-        url: 'https://energeek.id/',
+        title: 'Sobat UMKM Pro — Sidoarjo',
+        contentKey: 'experience.experienceItems.sobatUmkm.content',
+        professionKey: 'experience.experienceItems.sobatUmkm.profession',
+        periodKey: 'experience.experienceItems.sobatUmkm.period',
+        lengthKey: 'experience.experienceItems.sobatUmkm.length',
+        url: 'https://promap-v2-3fpn.vercel.app',
         technologies: [
-            'php', 'laravel', 'javascript', 'jquery','vue','mysql',
-            'bootstrap', 'postgresql', 'git','gitlab'
+            'nextjs', 'prisma', 'postgresql', 'tailwind', 'nextauth'
+        ]
+    },
+    {
+        title: 'CV. Arfa Nusantara Teknologi — Surabaya',
+        contentKey: 'experience.experienceItems.arfaNusantara.content',
+        professionKey: 'experience.experienceItems.arfaNusantara.profession',
+        periodKey: 'experience.experienceItems.arfaNusantara.period',
+        lengthKey: 'experience.experienceItems.arfaNusantara.length',
+        url: 'https://github.com/inorugntg',
+        technologies: [
+            'laravel', 'vue', 'mysql', 'bootstrap', 'git'
         ]
     }
 ];
@@ -90,7 +100,7 @@ const experienceItems: Experience[] = [
 @media (min-width: @first-breakpoint) {
     .experience {
         min-width: 36rem;
-        max-width: 38rem;
+        max-width: 44rem;
         padding-bottom: 7rem;
 
         .title {

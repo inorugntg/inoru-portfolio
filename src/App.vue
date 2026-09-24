@@ -9,6 +9,8 @@
 
         <LandingPage />
 
+        <About />
+
         <Experience />
 
         <Education />
@@ -27,6 +29,7 @@
 import Cursor from '@/components/Cursor.vue';
 import Navbar from '@/components/Navbar/Navbar.vue';
 import LandingPage from '@/components/LandingPage/LandingPage.vue';
+import About from '@/components/About.vue';
 import Education from '@/components/Education/Education.vue';
 import Experience from '@/components/Experience/Experience.vue';
 import Skills from '@/components/Skills.vue';

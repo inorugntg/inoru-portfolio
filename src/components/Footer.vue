@@ -11,8 +11,6 @@ const vCursorHover = useCursorHover();
 
 const themeStore = useThemeStore();
 
-const currentYear: number = new Date().getFullYear();
-
 </script>
 
 <template>
@@ -22,7 +20,7 @@ const currentYear: number = new Date().getFullYear();
                   'footer-light-theme': themeStore.theme === LightTheme }"
     >
         <h3 class="info">
-            {{ t('author') }} - {{ currentYear }} {{ t('footer.allRightsReserved') }}
+            {{ t('footer.text') }}
         </h3>
 
         <!-- icons visible on footer while screen is small -->
@@ -30,46 +28,66 @@ const currentYear: number = new Date().getFullYear();
             <a
                 class="link"
                 target="_blank"
-                aria-label="Linkedin"
-                href="https://www.linkedin.com/in/inoru-akhmad-5082b0270/?originalSubdomain=id"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/inoru-akhmad-5082b0270/"
                 v-cursor-hover
             >
-                <Icon icon="logos:linkedin-icon" width="20" class="linkedin-icon" />
+                <Icon icon="logos:linkedin-icon" width="22" class="linkedin-icon" />
             </a>
-
 
             <a
                 class="link"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub"
                 href="https://github.com/inorugntg"
                 v-cursor-hover
             >
-                <Icon icon="codicon:github" width="20" />
+                <Icon icon="akar-icons:github-fill" width="22" />
+            </a>
+
+            <a
+                class="link"
+                aria-label="Gmail"
+                href="mailto:inoru375@gmail.com"
+                v-cursor-hover
+            >
+                <Icon icon="logos:google-gmail" width="22" class="gmail-icon" />
             </a>
         </div>
 
-        <!-- icons on left side of screen while screen is big -->
+        <!-- icons on left side of screen while screen is big (Fixed di kiri bawah) -->
         <div class="icons-on-big-screens">
             <a
                 class="link"
                 target="_blank"
-                aria-label="Linkedin"
-                href="https://www.linkedin.com/in/inoru-akhmad-5082b0270/?originalSubdomain=id"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/inoru-akhmad-5082b0270/"
                 v-cursor-hover
             >
-                <Icon icon="logos:linkedin-icon" width="40" class="linkedin-icon" />
+                <Icon icon="logos:linkedin-icon" width="34" class="linkedin-icon" />
             </a>
-
 
             <a
                 class="link"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub"
                 href="https://github.com/inorugntg"
                 v-cursor-hover
             >
-                <Icon icon="icon-park-outline:github" width="40" />
+                <Icon icon="akar-icons:github-fill" width="34" />
+            </a>
+
+            <a
+                class="link"
+                aria-label="Gmail"
+                href="mailto:inoru375@gmail.com"
+                v-cursor-hover
+            >
+                <Icon icon="logos:google-gmail" width="34" class="gmail-icon" />
             </a>
         </div>
     </footer>
@@ -94,36 +112,47 @@ const currentYear: number = new Date().getFullYear();
     }
     .linkedin-icon {
         background-color: white;
-        border-radius: 10%;
+        border-radius: 4px;
     }
     .info {
         text-align: center;
         padding-right: 0.3rem;
         font-family: 'LatoFontLight', serif;
-        font-size: 0.90rem;
+        font-size: 0.95rem;
     }
     .icons {
-        display: block;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
 
         .link {
-            padding-right: 0.3rem;
+            display: flex;
+            align-items: center;
         }
     }
     .icons-on-big-screens {
         display: none;
         align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: column;
         position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 4rem;
-        height: 7rem;
+        bottom: 2rem;
+        left: 1rem;
+        width: 3.5rem;
+        height: 9.5rem;
+        z-index: 10;
 
         a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            text-align: center;
+            transition: transform ease @hover-time;
+
+            &:hover {
+                transform: scale(1.18);
+            }
         }
     }
 }

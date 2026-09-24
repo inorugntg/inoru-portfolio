@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useThemeStore } from '@/stores/theme';
 import { TechnologyType } from '@/types/TechnologyType';
@@ -8,15 +9,16 @@ const themeStore = useThemeStore();
 
 type TechnologyConfigType = {
     title: string,
-    icon: string
+    icon: string,
     width: number
-}
+};
+
 type TechnologiesType = {
     [key in TechnologyType]: TechnologyConfigType;
 };
 
 const props = defineProps<{
-    element: keyof TechnologiesType
+    element: TechnologyType | string
 }>();
 
 const technologies: TechnologiesType = {
@@ -204,8 +206,155 @@ const technologies: TechnologiesType = {
         title: 'Mongodb',
         icon: 'logos:mongodb',
         width: 41
+    },
+    nextjs: {
+        title: 'NextJS',
+        icon: 'skill-icons:nextjs-light',
+        width: 36
+    },
+    prisma: {
+        title: 'Prisma',
+        icon: 'skill-icons:prisma',
+        width: 36
+    },
+    express: {
+        title: 'Express.js',
+        icon: 'skill-icons:expressjs-light',
+        width: 38
+    },
+    swagger: {
+        title: 'Swagger',
+        icon: 'logos:swagger',
+        width: 36
+    },
+    axios: {
+        title: 'Axios',
+        icon: 'logos:axios',
+        width: 42
+    },
+    neon: {
+        title: 'Neon DB',
+        icon: 'logos:neon-icon',
+        width: 36
+    },
+    restapi: {
+        title: 'REST APIs',
+        icon: 'carbon:api',
+        width: 36
+    },
+    shadcn: {
+        title: 'shadcn/ui',
+        icon: 'simple-icons:shadcnui',
+        width: 32
+    },
+    html5: {
+        title: 'HTML5',
+        icon: 'logos:html-5',
+        width: 34
+    },
+    jwt: {
+        title: 'JWT Auth',
+        icon: 'logos:jwt-icon',
+        width: 34
+    },
+    nextauth: {
+        title: 'NextAuth',
+        icon: 'tabler:shield-lock',
+        width: 34
+    },
+    githubactions: {
+        title: 'GitHub Actions',
+        icon: 'skill-icons:githubactions-dark',
+        width: 34
+    },
+    vercel: {
+        title: 'Vercel',
+        icon: 'logos:vercel-icon',
+        width: 34
+    },
+    postman: {
+        title: 'Postman',
+        icon: 'logos:postman-icon',
+        width: 34
+    },
+    prismastudio: {
+        title: 'Prisma Studio',
+        icon: 'skill-icons:prisma',
+        width: 34
+    },
+    vscode: {
+        title: 'VS Code',
+        icon: 'logos:visual-studio-code',
+        width: 34
+    },
+    figma: {
+        title: 'Figma',
+        icon: 'logos:figma',
+        width: 30
     }
 };
+
+const aliasMap: Record<string, TechnologyType> = {
+    'next.js 14': 'nextjs',
+    'next.js': 'nextjs',
+    'nextjs': 'nextjs',
+    'react': 'react',
+    'vue.js': 'vue',
+    'vue': 'vue',
+    'prisma': 'prisma',
+    'prisma orm': 'prisma',
+    'postgresql': 'postgresql',
+    'postgres': 'postgresql',
+    'postgresql (neon)': 'postgresql',
+    'neon': 'neon',
+    'nextauth': 'nextauth',
+    'jwt auth': 'jwt',
+    'jwt': 'jwt',
+    'tailwind css': 'tailwind',
+    'tailwind': 'tailwind',
+    'shadcn/ui': 'shadcn',
+    'shadcn': 'shadcn',
+    'node.js': 'node',
+    'node': 'node',
+    'express.js': 'express',
+    'express': 'express',
+    'laravel': 'laravel',
+    'rest api': 'restapi',
+    'mysql': 'mysql',
+    'git': 'git',
+    'github': 'github',
+    'github actions': 'githubactions',
+    'docker': 'docker',
+    'ubuntu': 'ubuntu',
+    'vercel': 'vercel',
+    'swagger': 'swagger',
+    'postman': 'postman',
+    'prisma studio': 'prismastudio',
+    'vs code': 'vscode',
+    'figma': 'figma',
+    'axios': 'axios',
+    'html5': 'html',
+    'css3': 'css'
+};
+
+const resolvedTech = computed(() => {
+    const rawKey = props.element.toLowerCase().trim();
+    const mappedKey = aliasMap[rawKey] || (rawKey as TechnologyType);
+    if (technologies[mappedKey]) {
+        return {
+            title: props.element.includes('.') || props.element.includes(' ') || props.element.includes('/')
+                ? props.element
+                : technologies[mappedKey].title,
+            icon: technologies[mappedKey].icon,
+            width: technologies[mappedKey].width
+        };
+    }
+    return {
+        title: props.element,
+        icon: 'tabler:code',
+        width: 30
+    };
+});
 
 </script>
 
@@ -218,12 +367,12 @@ const technologies: TechnologiesType = {
 
         <div class="icon">
             <Icon
-                :icon="technologies[props.element].icon"
-                :width="technologies[props.element].width"
+                :icon="resolvedTech.icon"
+                :width="resolvedTech.width"
             />
         </div>
 
-        <span class="title">{{ technologies[props.element].title }}</span>
+        <span class="title">{{ resolvedTech.title }}</span>
 
     </div>
 </template>
@@ -235,11 +384,19 @@ const technologies: TechnologiesType = {
     display: flex;
     align-items: center;
     min-height: 3.2rem;
-    padding: 0.2rem;
-    border: solid @blue-color 0.1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+    border: solid @blue-color 0.12rem;
     border-radius: 1rem;
+    box-shadow: 0 0 10px fade(@blue-color, 18%);
 
-    transition: background-color ease @theme-switch-time;
+    transition: background-color ease @theme-switch-time,
+                box-shadow ease @hover-time,
+                transform ease @hover-time;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 16px fade(@blue-color, 45%);
+    }
 
     .icon {
         display: flex;
@@ -248,6 +405,8 @@ const technologies: TechnologiesType = {
     }
     .title {
         padding: 0.5rem;
+        font-family: 'LatoFontRegular', serif;
+        font-size: 0.95rem;
     }
 }
 

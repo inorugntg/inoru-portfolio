@@ -38,9 +38,20 @@ const props = defineProps<{
             >
                 <h3 class="title">{{ props.title }}</h3>
 
-                <p class="content">
-                    {{ props.content }}
-                </p>
+                <div class="content">
+                    <div v-if="props.content.includes('\n')" class="bullet-list">
+                        <p
+                            v-for="(line, lineIndex) in props.content.split('\n')"
+                            :key="lineIndex"
+                            class="bullet-line"
+                        >
+                            {{ line }}
+                        </p>
+                    </div>
+                    <p v-else class="single-line">
+                        {{ props.content }}
+                    </p>
+                </div>
 
                 <div class="technologies">
                     <TechnologyElement
@@ -78,11 +89,17 @@ const props = defineProps<{
     width: 100%;
     border: solid @blue-color 0.2rem;
     border-radius: 1rem;
+    box-shadow: 0 0 18px fade(@blue-color, 18%);
     padding: 0.6rem 0.9rem 0.6rem 0.9rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
 
-    transition: background-color ease @theme-switch-time;
+    transition: background-color ease @theme-switch-time,
+                box-shadow ease @hover-time;
+
+    &:hover {
+        box-shadow: 0 0 25px fade(@blue-color, 35%);
+    }
 
     .title {
         display: flex;
@@ -91,13 +108,22 @@ const props = defineProps<{
         font-size: 1.4rem;
     }
     .content {
-        display: flex;
-        align-items: center;
         text-align: left;
         font-family: 'LatoFontLight', serif;
-        font-style: italic;
-        line-height: 1.3rem;
+        line-height: 1.45rem;
         font-size: 1.05rem;
+
+        .bullet-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .bullet-line,
+        .single-line {
+            margin: 0;
+            line-height: 1.45rem;
+        }
     }
     .technologies {
         display: flex;

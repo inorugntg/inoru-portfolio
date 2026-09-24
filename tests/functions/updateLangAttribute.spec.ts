@@ -16,7 +16,7 @@ describe('updateLangAttribute function', (): void => {
     it('updates default lang attribute when localStorage is empty', (): void => {
         updateLangAttribute();
 
-        expect(document.documentElement.getAttribute(LanguageKey))
+        expect(document.documentElement.getAttribute('lang'))
             .toBe(EnglishLanguage);
     });
 
@@ -25,12 +25,12 @@ describe('updateLangAttribute function', (): void => {
 
         localStorageMock.setItem(LanguageKey, IndonesiaLanguage);
         updateLangAttribute();
-        expect(documentElement.getAttribute(LanguageKey))
+        expect(documentElement.getAttribute('lang'))
             .toBe(IndonesiaLanguage);
 
         localStorageMock.setItem(LanguageKey, EnglishLanguage);
         updateLangAttribute();
-        expect(documentElement.getAttribute(LanguageKey))
+        expect(documentElement.getAttribute('lang'))
             .toBe(EnglishLanguage);
     });
 });

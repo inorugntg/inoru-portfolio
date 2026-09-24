@@ -23,7 +23,7 @@ module.exports = defineConfig({
             clientsClaim: true,
         },
         manifestPath: 'manifest.json',
-        name: 'Maciek Iwaniuk',
+        name: 'Inoru Akhmad',
         themeColor: '#00b3ff',
         msTileColor: '#000000',
         appleMobileWebAppCapable: 'yes',

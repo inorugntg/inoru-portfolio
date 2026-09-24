@@ -16,14 +16,23 @@ type Education = {
 };
 const educationItems: Education[] = [
     {
-        titleKey: 'education.educationItems.zse.title',
-        contentKey: 'education.educationItems.zse.content',
-        majorKey: 'education.educationItems.zse.major',
+        titleKey: 'education.educationItems.universitasTerbuka.title',
+        contentKey: 'education.educationItems.universitasTerbuka.content',
+        majorKey: 'education.educationItems.universitasTerbuka.major',
+        period: '2025 - Sekarang',
+        url: 'https://www.ut.ac.id/',
+        technologies: [
+            'nextjs', 'typescript', 'javascript', 'node', 'mysql', 'postgresql'
+        ]
+    },
+    {
+        titleKey: 'education.educationItems.smkn1Surabaya.title',
+        contentKey: 'education.educationItems.smkn1Surabaya.content',
+        majorKey: 'education.educationItems.smkn1Surabaya.major',
         period: '2021 - 2024',
         url: 'http://www.smkn1-sby.sch.id/',
         technologies: [
-            'php', 'javascript', 'mysql',
-            'python', 'java','ubuntu','mongodb'
+            'php', 'laravel', 'javascript', 'mysql', 'python', 'java', 'ubuntu'
         ]
     }
 ];

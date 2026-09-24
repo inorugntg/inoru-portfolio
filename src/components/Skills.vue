@@ -6,48 +6,56 @@ import { FadeDown, FadeLeft, FadeRight } from '@/constants/app';
 
 const { t } = useLanguageSwitcher();
 
-const useRegularlyTechnologies: TechnologyType[] = [
-    'php','laravel', 'mysql','git', 'github','graphql', 'node'
-];
+type SkillCategory = {
+    titleKey: string,
+    skills: TechnologyType[]
+};
 
-const hadContactTechnologies: TechnologyType[] = [
-    'python', 'java',
-    'jquery', 'bootstrap',
-    'postgresql', 'javascript', 'typescript',
-    'vue','react'
+const skillCategories: SkillCategory[] = [
+    {
+        titleKey: 'skills.categories.frontend',
+        skills: ['react', 'nextjs', 'vue', 'tailwind', 'shadcn', 'axios', 'html5', 'css']
+    },
+    {
+        titleKey: 'skills.categories.backend',
+        skills: ['node', 'express', 'laravel', 'restapi', 'jwt', 'nextauth']
+    },
+    {
+        titleKey: 'skills.categories.database',
+        skills: ['postgresql', 'mysql', 'prisma', 'neon']
+    },
+    {
+        titleKey: 'skills.categories.devops',
+        skills: ['git', 'github', 'githubactions', 'docker', 'ubuntu', 'vercel']
+    },
+    {
+        titleKey: 'skills.categories.tools',
+        skills: ['swagger', 'postman', 'prismastudio', 'vscode', 'figma']
+    }
 ];
 
 </script>
 
 <template>
     <div id="skills" class="skills">
-
         <h2 class="title" :data-aos="FadeDown">{{ t('skills.title') }}</h2>
 
-        <div class="element" :data-aos="FadeRight">
-            <h3 class="title-smaller">{{ t('skills.useRegularly') }}</h3>
+        <div
+            v-for="(category, index) in skillCategories"
+            :key="index"
+            class="element"
+            :data-aos="index % 2 === 0 ? FadeRight : FadeLeft"
+        >
+            <h3 class="title-smaller">{{ t(category.titleKey) }}</h3>
 
             <div class="content">
                 <TechnologyElement
-                    v-for="(technology, index) in useRegularlyTechnologies"
-                    :key="index"
+                    v-for="(technology, techIndex) in category.skills"
+                    :key="techIndex"
                     :element="technology"
                 />
             </div>
         </div>
-
-        <div class="element" :data-aos="FadeLeft">
-            <h3 class="title-smaller">{{ t('skills.hadContact') }}</h3>
-
-            <div class="content">
-                <TechnologyElement
-                    v-for="(technology, index) in hadContactTechnologies"
-                    :key="index"
-                    :element="technology"
-                />
-            </div>
-        </div>
-
     </div>
 </template>
 
@@ -69,19 +77,22 @@ const hadContactTechnologies: TechnologyType[] = [
         text-align: center;
         font-family: 'LatoFontBold', serif;
         font-size: 3rem;
-        padding-bottom: 0.4rem;
+        padding-bottom: 0.8rem;
         color: @blue-color;
     }
+
     .element {
         width: 100%;
-        padding-top: 0.7rem;
-        padding-bottom: 0.5rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.6rem;
 
         .title-smaller {
             width: 100%;
             text-align: center;
-            font-size: 1.5rem;
-            padding-bottom: 0.3rem;
+            font-size: 1.45rem;
+            font-family: 'LatoFontBold', serif;
+            padding-bottom: 0.4rem;
+            color: lighten(@blue-color, 10%);
         }
 
         .content {
@@ -89,9 +100,9 @@ const hadContactTechnologies: TechnologyType[] = [
             align-content: flex-start;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.6rem;
             width: 100%;
-            padding-top: 0.5rem;
+            padding-top: 0.4rem;
         }
     }
 }
@@ -99,12 +110,13 @@ const hadContactTechnologies: TechnologyType[] = [
 @media (min-width: @first-breakpoint) {
     .skills {
         min-width: 35rem;
-        max-width: 40rem;
+        max-width: 46rem;
         padding-bottom: 7rem;
 
         .element {
             .title-smaller {
                 text-align: left;
+                padding-left: 0.2rem;
             }
             .content {
                 justify-content: flex-start;

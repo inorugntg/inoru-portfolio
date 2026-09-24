@@ -1,50 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import ProjectsItem from '@/components/Projects/ProjectsItem.vue';
 import { useLanguageSwitcher } from '@/composables/useLanguageSwitcher';
-import { TechnologyType } from '@/types/TechnologyType';
 import { FadeDown, FadeLeft, FadeRight } from '@/constants/app';
+import { getProjects } from '@/data/portfolio';
 
-const { t } = useLanguageSwitcher();
+const { t, currentLanguage } = useLanguageSwitcher();
 
-type ProjectType = {
-    titleKey: string,
-    contentKey: string,
-    github: string,
-    online?: string,
-    technologies: TechnologyType[]
-};
-const projects: ProjectType[] = [
-    {
-        titleKey: 'projects.projectsItems.shopSystem.title',
-        contentKey: 'projects.projectsItems.shopSystem.content',
-        github: 'https://github.com/Racheltbt20/ResepMakanan.git',
-        technologies: [
-            'php', 'laravel', 'javascript',
-            'mysql', 'bootstrap'
-        ]
-    },
-    {
-        titleKey: 'projects.projectsItems.snakeWebApp.title',
-        contentKey: 'projects.projectsItems.snakeWebApp.content',
-        github: 'https://github.com/ahmadsyahani/futsool.git',
-        technologies: [
-            'php', 'laravel', 'javascript',
-            'jquery', 'bootstrap', 'mysql'
-        ]
-    },
-    {
-        titleKey: 'projects.projectsItems.snakeGame.title',
-        contentKey: 'projects.projectsItems.snakeGame.content',
-        github: 'https://github.com/inorugntg/Blog-App-Node-React.git',
-        technologies: ['javascript', 'css','node','react']
-    },
-    {
-        titleKey: 'projects.projectsItems.minesweeper.title',
-        contentKey: 'projects.projectsItems.minesweeper.content',
-        github: 'https://github.com/inorugntg/Clinic_Management.git',
-        technologies: ['javascript', 'css', 'bootstrap', 'php', 'laravel']
-    }
-];
+const projectList = computed(() => getProjects(currentLanguage.value));
+
 </script>
 
 <template>
@@ -56,13 +20,13 @@ const projects: ProjectType[] = [
 
         <div class="items">
             <ProjectsItem
-                v-for="(project, index) in projects"
+                v-for="(project, index) in projectList"
                 :key="index"
-                :title="t(project.titleKey)"
-                :content="t(project.contentKey)"
-                :technologies="project.technologies"
-                :github="project.github"
-                :online="project.online"
+                :title="project.title"
+                :content="project.description"
+                :features="project.features"
+                :technologies="project.tech"
+                :online="project.liveDemo"
                 :animation="index % 2 === 0 ? FadeRight : FadeLeft"
             />
         </div>
@@ -101,7 +65,7 @@ const projects: ProjectType[] = [
 @media (min-width: @first-breakpoint) {
     .projects {
         min-width: 40rem;
-        max-width: 42rem;
+        max-width: 46rem;
         padding-bottom: 7rem;
 
         .title {

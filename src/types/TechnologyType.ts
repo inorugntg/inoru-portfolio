@@ -35,4 +35,21 @@ export type TechnologyType =
     'ubuntu' |
     'cpp' |
     'mongodb' |
-    'nuxt';
+    'nuxt' |
+    'nextjs' |
+    'prisma' |
+    'express' |
+    'swagger' |
+    'axios' |
+    'neon' |
+    'restapi' |
+    'shadcn' |
+    'html5' |
+    'jwt' |
+    'nextauth' |
+    'githubactions' |
+    'vercel' |
+    'postman' |
+    'prismastudio' |
+    'vscode' |
+    'figma';

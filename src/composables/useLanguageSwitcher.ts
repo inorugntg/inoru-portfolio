@@ -11,7 +11,7 @@ import { LanguageKey } from '@/constants/localStorage';
 export const useLanguageSwitcher = () => {
     // t => translations
     // locale => currently selected language
-    const { t, locale } = useI18n({
+    const { t, tm, locale } = useI18n({
         useScope: 'global'
     });
 
@@ -25,5 +25,5 @@ export const useLanguageSwitcher = () => {
         );
     };
 
-    return { t, changeLanguage };
+    return { t, tm, changeLanguage, currentLanguage: locale, locale };
 };

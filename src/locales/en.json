@@ -1,14 +1,14 @@
 {
     "navbar": {
-        "education": "Education",
         "experience": "Experience",
+        "education": "Education",
         "skills": "Skills",
         "projects": "Projects",
         "contact": "Contact",
         "images": {
             "sun": "Change theme to light",
             "moon": "Change theme to dark",
-            "indonesiaFlag": "Change language to indonesian",
+            "indonesiaFlag": "Change language to Indonesian",
             "greatBritainFlag": "Change language to English"
         }
     },
@@ -16,21 +16,29 @@
     "landingPage": {
         "myNameIs": "Hi, my name is",
         "name": "Inoru Akhmad.",
-        "description": "I am a graduate of a vocational high school in software engineer, with a strong emphasis on enhancing my skills. I aspire to build my future in the IT industry and constantly strive to develop myself to stay up to date with the latest technologies."
+        "tagline": "Full-Stack Web Developer | Next.js, Laravel, PostgreSQL",
+        "subTagline": "Building modern web applications with a focus on performance, UI/UX, and multi-tenant architecture.",
+        "viewProjects": "View Projects",
+        "downloadCv": "Download CV"
+    },
+
+    "about": {
+        "title": "About Me",
+        "description": "Graduate of SMK Negeri 1 Surabaya majoring in Software Engineering and active Information Systems student at Universitas Terbuka (3rd semester). Experienced in building full-stack web applications using Next.js, Laravel, and PostgreSQL, focusing on REST API development, multi-tenant architecture, and web performance optimization."
     },
 
     "education": {
         "title": "Education",
         "educationItems": {
-            "zse": {
-                "title": "State Vocational High School 1 Surabaya",
-                "content": "Thanks to my education at this institute, I gained a solid foundation in software engineering. This experience broadened my horizons and provided me with extensive knowledge about databases, as well as desktop and web application development.",
-                "major": "Software Engineering"
+            "universitasTerbuka": {
+                "title": "Universitas Terbuka",
+                "content": "Pursuing higher education in Information Systems (3rd semester) to deepen expertise in programming, database architecture, and enterprise system analysis and management.",
+                "major": "Information Systems – 3rd Semester"
             },
-            "universityOfTechnology": {
-                "title": "Bialystok University of Technology",
-                "content": "Will expand IT-related knowledge.",
-                "major": "Computer science"
+            "smkn1Surabaya": {
+                "title": "State Vocational High School 1 Surabaya",
+                "content": "Gained a solid foundation in software engineering, algorithms, databases, as well as desktop and web application development.",
+                "major": "Software Engineering"
             }
         }
     },
@@ -38,16 +46,18 @@
     "experience": {
         "title": "Experience",
         "experienceItems": {
-            "merinosoft": {
-                "content": "Development of a web application relating to the management of employees in a company.",
-                "profession": "Web Developer (Intern)",
-                "period": "Oct 2022 - Maret 2023 ",
-                "length": "(6 months)"
+            "sobatUmkm": {
+                "title": "Sobat UMKM Pro — Sidoarjo",
+                "content": "• Developed ProMaP (Project Management Platform), a multi-tenant SaaS application for employee action plans, proposals, and project timeline monitoring.\n• Designed REST APIs with JWT authentication, 4-level RBAC, and multi-tenant company data isolation.\n• Optimized page performance using Server Components, caching, dynamic imports, and Suspense.\n• Built Randumart e-commerce website (herbal products, umrah souvenirs, gifts) featuring dynamic Bundling, Hampers, and Promo Banners.",
+                "profession": "IT Operational (Intern)",
+                "period": "August 2026 – Present",
+                "length": "(Present)"
             },
-            "ebrand": {
-                "content": "Development of a distributed microservices-based system relating to online brand protection. Integration with multiple external APIs.",
-                "profession":"PHP Developer",
-                "period": "Apr 2023 - Sep 2023 ",
+            "arfaNusantara": {
+                "title": "CV. Arfa Nusantara Teknologi — Surabaya",
+                "content": "• Developed employee attendance status web application using Laravel and Vue.js.\n• Built and maintained REST APIs for robust frontend-backend integration.\n• Optimized backend performance through query optimization and caching.\n• Designed responsive user interfaces with Vue.js and Bootstrap.",
+                "profession": "Web Developer (Intern)",
+                "period": "October 2022 – March 2023",
                 "length": "(6 months)"
             }
         }
@@ -55,38 +65,53 @@
 
     "skills": {
         "title": "Skills",
-        "useRegularly": "I use regularly",
-        "hadContact": "I had contact with"
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Database",
+            "devops": "DevOps",
+            "tools": "Tools"
+        }
     },
 
     "projects": {
         "title": "Projects",
+        "viewDemo": "Live Demo",
         "projectsItems": {
-            "shopSystem": {
-                "title": "Food Reciepe",
-                "content": "Food recipe website application. This project was created to manage food recipes. The folder directory is arranged neatly."
+            "promap": {
+                "title": "ProMaP — Project Management Platform (2026)",
+                "description": "Multi-tenant SaaS application for managing employee action plans, proposals, and project timeline monitoring.",
+                "features": [
+                    "4-level RBAC (Super Admin, Operational Admin, Manager, PIC)",
+                    "Server Components + caching for optimal performance",
+                    "Kanban Board, Gantt Calendar, and PDF Export",
+                    "In-app notification system + automated overdue cron jobs"
+                ]
             },
-            "snakeWebApp": {
-                "title": "Rent a football field",
-                "content": "This application is used to assist field rental payment methods based on rental hours and field type. This application has extensive user account functionality, along with a comprehensive and feature-rich admin page."
-            },
-            "snakeGame": {
-                "title": "Blog App",
-                "content": "This application is designed to make it easy for bloggers to create, edit and publish content quickly and efficiently. Apart from that, users can also enjoy various interesting articles from various topic categories. With a focus on interactivity, content editing, and an attractive appearance, this project aims to improve the user experience for both bloggers and readers."
-            },
-            "minesweeper": {
-                "title": "Clinic Management System",
-                "content": "Website-based Clinic Management Application. This application was created with the aim of assisting in the appointment process with doctors, has good features and infrastructure"
+            "randumart": {
+                "title": "Randumart — E-Commerce Website (2026)",
+                "description": "E-commerce platform for herbal goods, umrah souvenirs, and gifts with checkout via WhatsApp.",
+                "features": [
+                    "Bundling & Hamper features with automated stock management",
+                    "Dynamic Promo Banner system (Flash Sale, Percent Discount, Custom)",
+                    "Order state machine (PENDING → PAID → SHIPPED → COMPLETED)",
+                    "Auto-increment rating & reviewCount upon order PAID"
+                ]
             }
         }
     },
 
     "contact": {
-        "title": "Contact"
+        "title": "Contact",
+        "subtitle": "Let's connect for collaboration and new opportunities!",
+        "location": "Surabaya, Indonesia",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "email": "Email"
     },
 
     "footer": {
-        "allRightsReserved": "© All rights reserved"
+        "text": "Inoru Akhmad - 2026 © All rights reserved"
     },
 
     "author": "Inoru Akhmad"
