@@ -17,14 +17,14 @@
         "myNameIs": "Hi, my name is",
         "name": "Inoru Akhmad.",
         "tagline": "Full-Stack Web Developer | Next.js, Laravel, PostgreSQL",
-        "subTagline": "Building modern web applications with a focus on performance, UI/UX, and multi-tenant architecture.",
+        "subTagline": "Building high-performance, secure multi-tenant web applications with automated testing (SonarQube & Playwright) and multi-layered security hardening.",
         "viewProjects": "View Projects",
         "downloadCv": "Download CV"
     },
 
     "about": {
         "title": "About Me",
-        "description": "Graduate of SMK Negeri 1 Surabaya majoring in Software Engineering and active Information Systems student at Universitas Terbuka (3rd semester). Experienced in building full-stack web applications using Next.js, Laravel, and PostgreSQL, focusing on REST API development, multi-tenant architecture, and web performance optimization."
+        "description": "Full Stack Web Developer with a Software Engineering background and active Information Systems student at Universitas Terbuka (3rd semester). Experienced in building REST APIs, backend architecture, and modern responsive web interfaces using React, Next.js, Laravel, Node.js, and PostgreSQL. Focused on efficient APIs, secure authentication (JWT & NextAuth), performance optimization, Core Web Vitals, code quality with SonarQube & Jest, and multi-layered security audits (npm audit, Nmap, Katana, Nuclei)."
     },
 
     "education": {
@@ -48,7 +48,7 @@
         "experienceItems": {
             "sobatUmkm": {
                 "title": "Sobat UMKM Pro — Sidoarjo",
-                "content": "• Developed ProMaP (Project Management Platform), a multi-tenant SaaS application for employee action plans, proposals, and project timeline monitoring.\n• Designed REST APIs with JWT authentication, 4-level RBAC, and multi-tenant company data isolation.\n• Optimized page performance using Server Components, caching, dynamic imports, and Suspense.\n• Built Randumart e-commerce website (herbal products, umrah souvenirs, gifts) featuring dynamic Bundling, Hampers, and Promo Banners.",
+                "content": "• Develop UI/UX and backend for ProMaP (Project Management Platform) using Next.js 14/15 (App Router), Tailwind CSS, shadcn/ui, Prisma ORM, and PostgreSQL (Neon) deployed on Hostinger server (Nginx reverse proxy).\n• Design and implement REST APIs with JWT authentication, 4-level RBAC (Super Admin, Operational Admin, Manager, PIC), and strict multi-tenant company data isolation.\n• Optimize application performance and database queries using Server Components, precise Prisma selects (anti-N+1), caching (unstable_cache + revalidateTag), dynamic imports, and Suspense to reduce First Load JS.\n• Conduct Static Application Security Testing (SAST) using SonarQube and Jest unit tests (LCOV reports), resolving accessibility (S1082) & sorting (S2871) issues, improving coverage from 9.6% to 58.4%, and achieving Quality Gate PASSED status.\n• Perform vulnerability assessments (npm audit) mitigating 16 package vulnerabilities (including body-parser DoS CVE-2026-111181, Zod memory exhaustion CVE-2023-54404, fast-uri spoofing CVE-2026-110306) to achieve 0 vulnerabilities, enforcing TLS/SSL database rules, and host whitelisting to prevent SSRF.\n• Execute 190 automated unit & integration test scenarios (100% pass rate) and automated E2E testing with Playwright across 13 core modules (authentication, RBAC, Kanban, Gantt calendar, analytics dashboards).\n• Conduct multi-layered Penetration & Security Testing: Nmap Scanner (port audit; 80/443 Nginx open, database 3306/5432, SSH 22, Redis 6379 filtered), Katana Engine (crawling 35 routes/endpoints & validating middleware guest redirect), Nuclei Scanner (ModSecurity WAF resilience against automated attacks), and security header inspections (HSTS, X-Frame-Options, X-Content-Type-Options, & API Rate Limiting).\n• Build Randumart e-commerce business features including order state machine (PENDING → MENUNGGU_BAYAR → PAID → PROCESSING → SHIPPED → COMPLETED), automatic stock decrement, automatic rating & reviewCount increments upon PAID orders, dynamic promotional banners with countdown timers, NextAuth (Google SSO + Credentials), and on-page SEO / Core Web Vitals improvements.",
                 "profession": "IT Operational (Intern)",
                 "period": "August 2026 – Present",
                 "length": "(Present)"
@@ -70,6 +70,8 @@
             "backend": "Backend",
             "database": "Database",
             "devops": "DevOps",
+            "testing": "Unit & E2E Testing",
+            "security": "Security Testing & Hardening",
             "tools": "Tools"
         }
     },
@@ -80,22 +82,24 @@
         "projectsItems": {
             "promap": {
                 "title": "ProMaP — Project Management Platform (2026)",
-                "description": "Multi-tenant SaaS application for managing employee action plans, proposals, and project timeline monitoring.",
+                "description": "Enterprise multi-tenant SaaS application for managing employee action plans, proposals, and project timeline monitoring engineered with high security and performance.",
                 "features": [
-                    "4-level RBAC (Super Admin, Operational Admin, Manager, PIC)",
-                    "Server Components + caching for optimal performance",
-                    "Kanban Board, Gantt Calendar, and PDF Export",
-                    "In-app notification system + automated overdue cron jobs"
+                    "4-level RBAC (Super Admin, Operational Admin, Manager, PIC) & strict multi-tenant data isolation",
+                    "Optimized Server Components, unstable_cache, dynamic imports & N+1-free Prisma queries",
+                    "SonarQube Quality Gate PASSED (58.4% Code Coverage), 190/190 Unit & Integration Tests (100% Pass)",
+                    "Automated Playwright E2E Testing across 13 core application modules with 100% pass rate",
+                    "Security Audit & Pen-testing (npm audit 0 vuln, Nmap filtered ports, Katana crawler, Nuclei WAF, HSTS & Rate Limiting)",
+                    "Production ready: Nginx reverse proxy on Hostinger VPS with full SSL/TLS encryption"
                 ]
             },
             "randumart": {
-                "title": "Randumart — E-Commerce Website (2026)",
-                "description": "E-commerce platform for herbal goods, umrah souvenirs, and gifts with checkout via WhatsApp.",
+                "title": "Randumart — Full Stack E-Commerce (2026)",
+                "description": "Full-stack e-commerce platform for herbal goods, umrah souvenirs, and gift hampers with automated stock management, dynamic promo banners, and WhatsApp checkout.",
                 "features": [
-                    "Bundling & Hamper features with automated stock management",
-                    "Dynamic Promo Banner system (Flash Sale, Percent Discount, Custom)",
-                    "Order state machine (PENDING → PAID → SHIPPED → COMPLETED)",
-                    "Auto-increment rating & reviewCount upon order PAID"
+                    "Order state machine (PENDING → MENUNGGU_BAYAR → PAID → PROCESSING → SHIPPED → COMPLETED)",
+                    "Auto-increment rating & reviewCount plus automated stock decrement upon PAID orders",
+                    "Dynamic Promo Banner system (Flash Sale, Percent Discount, Custom) with live countdown timers",
+                    "NextAuth (Google SSO + Credentials), responsive checkout flow, on-page SEO & Core Web Vitals"
                 ]
             }
         }

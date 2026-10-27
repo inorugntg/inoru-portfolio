@@ -291,10 +291,66 @@ const technologies: TechnologiesType = {
         title: 'Figma',
         icon: 'logos:figma',
         width: 30
+    },
+    sonarqube: {
+        title: 'SonarQube',
+        icon: 'simple-icons:sonarqube',
+        width: 34
+    },
+    playwright: {
+        title: 'Playwright',
+        icon: 'logos:playwright',
+        width: 34
+    },
+    jest: {
+        title: 'Jest',
+        icon: 'logos:jest',
+        width: 34
+    },
+    vitest: {
+        title: 'Vitest',
+        icon: 'logos:vitest',
+        width: 34
+    },
+    jmeter: {
+        title: 'Apache JMeter',
+        icon: 'simple-icons:apachejmeter',
+        width: 34
+    },
+    npmaudit: {
+        title: 'npm audit (SAST)',
+        icon: 'logos:npm-icon',
+        width: 34
+    },
+    nuclei: {
+        title: 'Nuclei Scanner',
+        icon: 'carbon:security',
+        width: 32
+    },
+    nmap: {
+        title: 'Nmap Scanner',
+        icon: 'carbon:network-4',
+        width: 32
+    },
+    katana: {
+        title: 'Katana Engine',
+        icon: 'carbon:search-advanced',
+        width: 32
+    },
+    devtools: {
+        title: 'DevTools & Code Audit',
+        icon: 'tabler:device-desktop-analytics',
+        width: 32
+    },
+    nginx: {
+        title: 'Nginx',
+        icon: 'logos:nginx',
+        width: 36
     }
 };
 
 const aliasMap: Record<string, TechnologyType> = {
+    'next.js 15': 'nextjs',
     'next.js 14': 'nextjs',
     'next.js': 'nextjs',
     'nextjs': 'nextjs',
@@ -333,8 +389,27 @@ const aliasMap: Record<string, TechnologyType> = {
     'vs code': 'vscode',
     'figma': 'figma',
     'axios': 'axios',
-    'html5': 'html',
-    'css3': 'css'
+    'html5': 'html5',
+    'css3': 'css',
+    'sonarqube': 'sonarqube',
+    'playwright': 'playwright',
+    'jest': 'jest',
+    'vitest': 'vitest',
+    'vitest / jest': 'vitest',
+    'apache jmeter': 'jmeter',
+    'jmeter': 'jmeter',
+    'npm audit': 'npmaudit',
+    'npm audit (sast)': 'npmaudit',
+    'nuclei scanner': 'nuclei',
+    'nuclei': 'nuclei',
+    'nmap scanner': 'nmap',
+    'nmap': 'nmap',
+    'katana engine': 'katana',
+    'katana': 'katana',
+    'devtools': 'devtools',
+    'devtools & code audit': 'devtools',
+    'nginx': 'nginx',
+    'nginx reverse proxy': 'nginx'
 };
 
 const resolvedTech = computed(() => {

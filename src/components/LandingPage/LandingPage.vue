@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import AnimateSplitLetters from '@/components/LandingPage/AnimateSplitLetters.vue';
 import { useLanguageSwitcher } from '@/composables/useLanguageSwitcher';
 import { useCursorHover } from '@/directives/useCursorHover';
@@ -39,6 +40,14 @@ const vCursorHover = useCursorHover();
                         v-cursor-hover
                     >
                         {{ t('landingPage.viewProjects') }}
+                    </a>
+                    <a
+                        href="#experience"
+                        class="btn-secondary"
+                        v-cursor-hover
+                    >
+                        <Icon icon="mdi:briefcase-outline" width="18" style="margin-right: 0.4rem" />
+                        {{ t('navbar.experience') }}
                     </a>
                 </div>
             </div>
@@ -130,6 +139,20 @@ const vCursorHover = useCursorHover();
                     transform: translateY(-2px);
                     background-color: lighten(@blue-color, 10%);
                     box-shadow: 0 0 22px fade(@blue-color, 60%);
+                }
+            }
+
+            .btn-secondary {
+                background-color: fade(@blue-color, 8%);
+                color: inherit;
+                border: solid @blue-color 0.15rem;
+                box-shadow: 0 0 12px fade(@blue-color, 15%);
+
+                &:hover {
+                    transform: translateY(-2px);
+                    background-color: fade(@blue-color, 20%);
+                    border-color: lighten(@blue-color, 12%);
+                    box-shadow: 0 0 18px fade(@blue-color, 40%);
                 }
             }
         }

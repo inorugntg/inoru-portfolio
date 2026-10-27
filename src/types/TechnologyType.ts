@@ -52,4 +52,15 @@ export type TechnologyType =
     'postman' |
     'prismastudio' |
     'vscode' |
-    'figma';
+    'figma' |
+    'sonarqube' |
+    'playwright' |
+    'jest' |
+    'vitest' |
+    'jmeter' |
+    'npmaudit' |
+    'nuclei' |
+    'nmap' |
+    'katana' |
+    'devtools' |
+    'nginx';

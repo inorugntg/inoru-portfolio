@@ -26,7 +26,15 @@ const skillCategories: SkillCategory[] = [
     },
     {
         titleKey: 'skills.categories.devops',
-        skills: ['git', 'github', 'githubactions', 'docker', 'ubuntu', 'vercel']
+        skills: ['git', 'github', 'githubactions', 'docker', 'ubuntu', 'nginx', 'vercel']
+    },
+    {
+        titleKey: 'skills.categories.testing',
+        skills: ['sonarqube', 'playwright', 'vitest', 'jest', 'jmeter']
+    },
+    {
+        titleKey: 'skills.categories.security',
+        skills: ['npmaudit', 'nuclei', 'nmap', 'katana', 'devtools']
     },
     {
         titleKey: 'skills.categories.tools',

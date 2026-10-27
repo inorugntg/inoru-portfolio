@@ -23,9 +23,9 @@ const experienceItems: Experience[] = [
         professionKey: 'experience.experienceItems.sobatUmkm.profession',
         periodKey: 'experience.experienceItems.sobatUmkm.period',
         lengthKey: 'experience.experienceItems.sobatUmkm.length',
-        url: 'https://promap-v2-3fpn.vercel.app',
+        url: 'https://promapv2.sobatumkmpro.com/',
         technologies: [
-            'nextjs', 'prisma', 'postgresql', 'tailwind', 'nextauth'
+            'nextjs', 'prisma', 'postgresql', 'tailwind', 'shadcn', 'sonarqube', 'playwright', 'npmaudit', 'nginx'
         ]
     },
     {

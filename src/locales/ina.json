@@ -17,14 +17,14 @@
         "myNameIs": "Halo, nama saya",
         "name": "Inoru Akhmad.",
         "tagline": "Full-Stack Web Developer | Next.js, Laravel, PostgreSQL",
-        "subTagline": "Membangun aplikasi web modern dengan fokus pada performa, UI/UX, dan arsitektur multi-tenant.",
+        "subTagline": "Membangun aplikasi web modern dengan keunggulan performa, arsitektur multi-tenant aman, otomasi pengujian (SonarQube & Playwright), serta pengujian keamanan berlapis.",
         "viewProjects": "Lihat Proyek",
         "downloadCv": "Download CV"
     },
 
     "about": {
         "title": "Tentang Saya",
-        "description": "Lulusan SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak dan mahasiswa aktif Sistem Informasi di Universitas Terbuka (semester 3). Berpengalaman membangun aplikasi web full-stack menggunakan Next.js, Laravel, dan PostgreSQL, dengan fokus pada pengembangan REST API, arsitektur multi-tenant, dan optimasi performa web."
+        "description": "Lulusan SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak dan mahasiswa aktif Sistem Informasi di Universitas Terbuka (semester 3). Berpengalaman membangun REST API, arsitektur backend, serta antarmuka web modern yang responsif menggunakan React, Next.js, Laravel, Node.js, dan PostgreSQL. Berfokus pada efisiensi API, autentikasi aman (JWT & NextAuth), optimasi performa & Core Web Vitals, pengujian kualitas kode dengan SonarQube & Jest, serta audit keamanan menyeluruh (npm audit, Nmap, Katana, Nuclei)."
     },
 
     "education": {
@@ -48,7 +48,7 @@
         "experienceItems": {
             "sobatUmkm": {
                 "title": "Sobat UMKM Pro — Sidoarjo",
-                "content": "• Mengembangkan ProMaP (Project Management Platform), aplikasi SaaS multi-tenant untuk manajemen action plan, proposal, dan monitoring timeline project karyawan.\n• Merancang REST API dengan autentikasi JWT, RBAC 4 level role, dan isolasi data multi-tenant per perusahaan.\n• Mengoptimalkan performa halaman melalui Server Components, caching, dynamic import, dan Suspense.\n• Mengembangkan website e-commerce Randumart (toko herbal, oleh-oleh umrah, souvenir) dengan fitur Bundling, Parsel, dan Promo Banner dinamis.",
+                "content": "• Mengembangkan antarmuka UI/UX dan backend platform SaaS multi-tenant ProMaP menggunakan Next.js 14/15 (App Router), Tailwind CSS, shadcn/ui, Prisma ORM, dan PostgreSQL (Neon) pada server Hostinger (Nginx reverse proxy).\n• Merancang dan mengimplementasikan REST API dengan autentikasi JWT, 4-level RBAC (Super Admin, Operational Admin, Manager, PIC), dan isolasi data multi-tenant ketat antar perusahaan.\n• Mengoptimalkan performa aplikasi dan query database melalui Server Components, Prisma select presisi (anti-N+1), caching (unstable_cache + revalidateTag), dynamic imports, dan Suspense untuk meminimalkan First Load JS.\n• Menjalankan Static Application Security Testing (SAST) dengan SonarQube & Jest unit test (laporan LCOV), memperbaiki masalah aksesibilitas (S1082) & sorting (S2871), menaikkan coverage dari 9.6% ke 58.4%, dan meraih Quality Gate PASSED.\n• Melakukan penambalan keamanan (npm audit) menutup 16 kerentanan pustaka (termasuk body-parser DoS CVE-2026-111181, Zod memory exhaustion CVE-2023-54404, fast-uri spoofing CVE-2026-110306) hingga 0 vulnerability, menerapkan TLS/SSL DB, dan host whitelisting anti-SSRF.\n• Menjalankan 190 skenario Automated Unit & Integration Testing (100% kelulusan) dan E2E Testing Playwright pada 13 modul inti aplikasi (auth, RBAC, Kanban, Gantt chart, analitik).\n• Melakukan Penetration & Security Testing berlapis: Nmap Scanner (port web 80/443 Nginx terbuka, port database/SSH/Redis terfilter aman), Katana Engine (crawling 35 rute & validasi proteksi middleware redirect guest), Nuclei Scanner (uji ketahanan ModSecurity WAF), serta audit security headers (HSTS, X-Frame-Options, X-Content-Type-Options, & API Rate Limiting).\n• Mengembangkan fitur bisnis e-commerce Randumart: order state machine (PENDING → MENUNGGU_BAYAR → PAID → PROCESSING → SHIPPED → COMPLETED), auto-decrement stock, auto-increment rating & reviewCount saat PAID, promo banner dinamis dengan countdown timer, NextAuth (Google SSO + Credentials), serta optimasi SEO & Core Web Vitals.",
                 "profession": "IT Operational (Intern)",
                 "period": "Agustus 2026 – Sekarang",
                 "length": "(Saat ini)"
@@ -70,6 +70,8 @@
             "backend": "Backend",
             "database": "Database",
             "devops": "DevOps",
+            "testing": "Unit & E2E Testing",
+            "security": "Security Testing & Hardening",
             "tools": "Tools"
         }
     },
@@ -80,22 +82,24 @@
         "projectsItems": {
             "promap": {
                 "title": "ProMaP — Project Management Platform (2026)",
-                "description": "Aplikasi SaaS multi-tenant untuk manajemen action plan, proposal, dan monitoring timeline project karyawan.",
+                "description": "Aplikasi SaaS multi-tenant enterprise untuk manajemen action plan, proposal, dan monitoring timeline project karyawan dengan standar keamanan dan performa tinggi.",
                 "features": [
-                    "RBAC 4 level role (Super Admin, Admin Operasional, Manager, PIC)",
-                    "Server Components + caching untuk performa optimal",
-                    "Kanban Board, Kalender Gantt, dan Export PDF",
-                    "Sistem notifikasi in-app + cron job overdue otomatis"
+                    "RBAC 4 level role (Super Admin, Admin Operasional, Manager, PIC) & isolasi data multi-tenant",
+                    "Optimasi Server Components, unstable_cache, dynamic imports & query Prisma anti-N+1",
+                    "SonarQube Quality Gate PASSED (Coverage 58.4%), 190/190 Unit & Integration Tests (100% Pass)",
+                    "Automated E2E Testing Playwright pada 13 modul inti aplikasi dengan kelulusan 100%",
+                    "Audit Keamanan & Pen-testing (npm audit 0 vuln, Nmap port filtered, Katana crawler, Nuclei WAF, HSTS & Rate Limiting)",
+                    "Production ready: Nginx reverse proxy di Hostinger VPS dengan enkripsi SSL/TLS penuh"
                 ]
             },
             "randumart": {
-                "title": "Randumart — E-Commerce Website (2026)",
-                "description": "Website e-commerce toko herbal, oleh-oleh umrah, dan souvenir dengan checkout via WhatsApp.",
+                "title": "Randumart — Full Stack E-Commerce (2026)",
+                "description": "Website e-commerce toko herbal, oleh-oleh umrah, dan parsel souvenir dengan fitur manajemen stok otomatis, promo banner dinamis, dan checkout via WhatsApp.",
                 "features": [
-                    "Fitur Bundling & Parsel dengan auto-stock management",
-                    "Sistem Promo Banner dinamis (Flash Sale, Diskon Persen, Custom)",
-                    "State machine order (PENDING → PAID → SHIPPED → COMPLETED)",
-                    "Auto-increment rating & reviewCount saat order PAID"
+                    "Order state machine (PENDING → MENUNGGU_BAYAR → PAID → PROCESSING → SHIPPED → COMPLETED)",
+                    "Auto-increment rating & reviewCount serta auto-decrement stok setelah order berstatus PAID",
+                    "Sistem Promo Banner dinamis (Flash Sale, Diskon Persen, Custom) dengan countdown timer",
+                    "NextAuth (Google SSO + Credentials), checkout flow responsif, optimasi SEO & Core Web Vitals"
                 ]
             }
         }
